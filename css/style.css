@@ -29,13 +29,20 @@ l'écran est petit */
     background-color: rgb(156, 156, 156);
 }
 
-.menu-entry {    
+.menu-entry {  
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    font-size: 32px; 
     width: 100%;
     height: 200px;  
+    transition: all  ease-in-out .35s;  
 }
 
 .menu-entry:hover{
     box-shadow: 0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%), 0 11px 15px -7px rgb(0 0 0 / 20%);
+    width: 110%;
+    border-radius: 0px 18px 18px 0px;
 }
 
 .entry-1{
@@ -50,9 +57,7 @@ l'écran est petit */
     background-color:deeppink;
 }
 
-.entry-4{
-    background-color:rgb(71, 20, 255);
-}
+
 
 
 /* Panneau central, conteneur des "sections" de contenu principal */
@@ -83,6 +88,7 @@ l'écran est petit */
 }
 
 
+
 /* Attention, si l'on met la média query avant les autres styles,
 alors les autres styles viendront écraser ce que spécifie la média 
 query même dans le cas d'une taille d'écran petite!!!     */
@@ -100,4 +106,46 @@ query même dans le cas d'une taille d'écran petite!!!     */
     .menu-entry{
         height: 10vh;
     } 
+    .menu-entry:hover {
+        box-shadow: 0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%), 0 11px 15px -7px rgb(0 0 0 / 20%);
+        width: 110%;
+        border-radius: 0px;
+       
+    }
 }
+
+/* Exemple de sélecteur où l'on va vérifier l'existance de l'attribut  */
+[monAttribut] {
+    background-color: cadetblue;
+}
+
+/* Exemple de sélecteur où l'on va vérifier que la valeur donnée à un attribut dans l'HTML
+est égale à une valeur spécifiée dans le sélecteur*/
+[monAttribut2="machin"] {
+    border: solid 8px black;
+}
+
+/*
+Les styles vont s'appliquer sur n'importe quel élément HTML qui dispose d'un attribut
+nommé unAutreAtrributPerso, attribut qui aura pour valeur une chaine de caractère contenant
+comme sous chaine "chose"
+*/
+[unAutreAtrributPerso*="chose"]{
+    border: solid 8px rgb(6, 87, 112);
+}
+
+/* Pseudo élément before 
+viendra ajouter du contenu juste avant l'élément sélectionné par le sélecteur avant ::before
+*/
+
+h4:hover::before{
+    content: "> ";
+}
+
+/* Ici le style s'applique sur tous les éléments qui ont parmi leurs noms classes "menu-entry" 
+mais PAS "entry-2"
+*/
+.menu-entry:not(.entry-2){
+    color: rgb(58, 58, 58);
+}
+
