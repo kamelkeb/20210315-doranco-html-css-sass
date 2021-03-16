@@ -14,9 +14,20 @@
     display: flex;
 }
 
+.aside{
+    position: relative;
+}
 .menu-entry {
     width: 150px;
     height: 200px;
+    position:relative;
+    z-index: 1;
+    transition: left 0.6s;
+}
+
+.menu-entry:hover{
+    left: 20px;
+   
 }
 .entry-1{
 
