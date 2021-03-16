@@ -1,19 +1,29 @@
+/* Pour écraser les margin et padding qui sont mis par défaut
+par les navigateurs. Le souci est que ce ne sont pas les mêmes
+mises par défaut par différentes versions */
 *{
     padding: 0;
     margin: 0;
 }
 
+/* Partie header */
 .header {
     width: 100%;
     height: 10vh;
     background-color:crimson;
 }
 
+
+/****************** Partie centrale ****************/
+
+/* Le conteneur aussi du menu latéral que du contenu à proprement de notre page */
 .main-container{
     width: 100%;
     display: flex;
 }
 
+/* Menu latéral lorsque large écran, mis en fouter horizontal lorsque 
+l'écran est petit */
 .aside{
     width: 200px;
     background-color: rgb(156, 156, 156);
@@ -40,6 +50,8 @@
     background-color:rgb(71, 20, 255);
 }
 
+
+/* Panneau central, conteneur des "sections" de contenu principal */
 .central-panel{
     width: 100%;
     display :flex;
@@ -67,7 +79,9 @@
 }
 
 
-
+/* Attention, si l'on met la média query avant les autres styles,
+alors les autres styles viendront écraser ce que spécifie la média 
+query même dans le cas d'une taille d'écran petite!!!     */
 @media screen and (max-width: 768px){
     .main-container{
         flex-direction: column-reverse;
@@ -81,10 +95,5 @@
     }
     .menu-entry{
         height: 10vh;
-    }
-
- 
+    } 
 }
-
-
-
