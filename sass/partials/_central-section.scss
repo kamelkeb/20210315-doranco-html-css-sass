@@ -1,0 +1,17 @@
+@import "../variables/variables";
+/* */
+.central-section {
+  margin: $central-section-margin;
+  width: $central-section-width;
+  background-color: $central-section-bg-color;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .element {
+    background-color: $element-bg-color;
+    width: $card-size;
+    height: $card-size;
+    margin: $element-margin;
+    font-size: $element-font-size;
+  }
+}

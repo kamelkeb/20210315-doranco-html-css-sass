@@ -1,0 +1,15 @@
+@import "../variables/variables";
+
+/* Le conteneur aussi du menu latéral que du contenu à proprement de notre page */
+.main-container {
+  width: 100%;
+  display: flex;
+}
+/* Attention, si l'on met la média query avant les autres styles,
+alors les autres styles viendront écraser ce que spécifie la média 
+query même dans le cas d'une taille d'écran petite!!!     */
+@media screen and (max-width: 768px) {
+  .main-container {
+    flex-direction: column-reverse;
+  }
+}

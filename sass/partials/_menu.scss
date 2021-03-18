@@ -1,0 +1,28 @@
+@import "../variables/variables";
+
+/* Menu latéral lorsque large écran, mis en fouter horizontal lorsque 
+l'écran est petit */
+.aside {
+  width: $aside-width;
+  background-color: $aside-bg-color;
+  .menu-entry {
+    width: 100%;
+    height: $menu-entry-height;
+    &:hover {
+      box-shadow: $shadow-hover-regular;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    width: 100%;
+    height: $tab-bar-md-screen-height;
+  }
+  .menu-entry {
+    height: $tab-bar-md-screen-height;
+  }
+}

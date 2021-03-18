@@ -1,0 +1,30 @@
+@use "partials/header";
+@use "partials/central-section";
+@use "partials/menu";
+@use "partials/main-container";
+@use "partials/central-panel";
+@import "variables/variables";
+
+/* Pour écraser les margin et padding qui sont mis par défaut
+par les navigateurs. Le souci est que ce ne sont pas les mêmes
+mises par défaut par différentes versions */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.entry-1 {
+  background-color: darkorange;
+}
+
+.entry-2 {
+  background-color: cyan;
+}
+
+.entry-3 {
+  background-color: deeppink;
+}
+
+.entry-4 {
+  background-color: rgb(71, 20, 255);
+}

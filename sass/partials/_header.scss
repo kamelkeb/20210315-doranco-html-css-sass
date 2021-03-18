@@ -1,0 +1,8 @@
+@import "../variables/variables";
+
+/* Partie header */
+.header {
+  width: 100%;
+  height: $header-height;
+  background-color: $header-bg-color;
+}

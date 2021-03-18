@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/* Partie header */
+.header {
+  width: 100%;
+  height: 10vh;
+  background-color: purple;
+}
+
+/* */
+.central-section {
+  margin: 30px;
+  width: 80%;
+  background-color: grey;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.central-section .element {
+  background-color: gold;
+  width: 200px;
+  height: 200px;
+  margin: 12px;
+  font-size: 5rem;
+}
+
+/* Menu latéral lorsque large écran, mis en fouter horizontal lorsque 
+l'écran est petit */
+.aside {
+  width: 220px;
+  background-color: #eb9999;
+}
+.aside .menu-entry {
+  width: 100%;
+  height: 200px;
+}
+.aside .menu-entry:hover {
+  box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    width: 100%;
+    height: 10vh;
+  }
+
+  .menu-entry {
+    height: 10vh;
+  }
+}
+/* Le conteneur aussi du menu latéral que du contenu à proprement de notre page */
+.main-container {
+  width: 100%;
+  display: flex;
+}
+
+/* Attention, si l'on met la média query avant les autres styles,
+alors les autres styles viendront écraser ce que spécifie la média 
+query même dans le cas d'une taille d'écran petite!!!     */
+@media screen and (max-width: 768px) {
+  .main-container {
+    flex-direction: column-reverse;
+  }
+}
+/* Panneau central, conteneur des "sections" de contenu principal */
+.central-panel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Pour écraser les margin et padding qui sont mis par défaut
+par les navigateurs. Le souci est que ce ne sont pas les mêmes
+mises par défaut par différentes versions */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.entry-1 {
+  background-color: darkorange;
+}
+
+.entry-2 {
+  background-color: cyan;
+}
+
+.entry-3 {
+  background-color: deeppink;
+}
+
+.entry-4 {
+  background-color: #4714ff;
+}
+
+/*# sourceMappingURL=styles.css.map */
