@@ -17,5 +17,6 @@
     background-color: $element-bg-color;
     @include layout-size-spacing($card-size, $card-size, $element-margin, auto);
     font-size: $element-font-size;
+    @include hover-effect($shadow-hover-regular, 1.3);
   }
 }

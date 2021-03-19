@@ -11,3 +11,11 @@
   margin: $margin;
   padding: $padding;
 }
+
+@mixin hover-effect($shadow, $scale) {
+  &:hover {
+    box-shadow: $shadow;
+    border: solid black 2px;
+    transform: scale($scale);
+  }
+}

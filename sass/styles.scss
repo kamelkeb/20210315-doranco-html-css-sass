@@ -13,18 +13,25 @@ mises par défaut par différentes versions */
   margin: 0;
 }
 
-.entry-1 {
-  background-color: darkorange;
+%common-menu-entry {
+  font-size: 2rem;
+  &::before {
+    content: "> ";
+  }
 }
 
-.entry-2 {
-  background-color: cyan;
-}
-
-.entry-3 {
-  background-color: deeppink;
-}
-
-.entry-4 {
-  background-color: rgb(71, 20, 255);
+/* Dans le corps de la boucle, on mettra ce que l'on veut voir être répété
+ (dans le CSS généré) */
+/* Attention à ne jamais oublier de mettre en place ce qui va causer la terminaison
+  de la boucle (ie: faire en sorte qu'un jour la condition de terminaison
+  s'évalue à false) */
+$compteur: 1;
+@while ($compteur < $nbr-menu-entries) {
+  .entry-#{$compteur} {
+    background-color: rgb(random(255), random(255), random(255));
+    h4 {
+      @extend %common-menu-entry;
+    }
+  }
+  $compteur: $compteur + 1;
 }

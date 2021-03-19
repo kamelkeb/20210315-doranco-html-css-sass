@@ -1,4 +1,5 @@
 @import "../variables/variables";
+@import "../mixins/mixins";
 
 /* Menu latéral lorsque large écran, mis en fouter horizontal lorsque 
 l'écran est petit */
@@ -8,9 +9,8 @@ l'écran est petit */
   .menu-entry {
     width: 100%;
     height: $menu-entry-height;
-    &:hover {
-      box-shadow: $shadow-hover-regular;
-    }
+    @include hover-effect($shadow-hover-regular, 0.78);
+    @include layout-flex-centred(row);
   }
 }
 

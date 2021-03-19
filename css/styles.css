@@ -24,6 +24,11 @@
   padding: auto;
   font-size: 5rem;
 }
+.central-section .element:hover {
+  box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+  border: solid black 2px;
+  transform: scale(1.3);
+}
 
 /* Menu latéral lorsque large écran, mis en fouter horizontal lorsque 
 l'écran est petit */
@@ -34,9 +39,15 @@ l'écran est petit */
 .aside .menu-entry {
   width: 100%;
   height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .aside .menu-entry:hover {
   box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+  border: solid black 2px;
+  transform: scale(0.78);
 }
 
 @media screen and (max-width: 768px) {
@@ -83,20 +94,26 @@ mises par défaut par différentes versions */
   margin: 0;
 }
 
+.entry-3 h4, .entry-2 h4, .entry-1 h4 {
+  font-size: 2rem;
+}
+.entry-3 h4::before, .entry-2 h4::before, .entry-1 h4::before {
+  content: "> ";
+}
+
+/* Dans le corps de la boucle, on mettra ce que l'on veut voir être répété
+ (dans le CSS généré) */
+/* Attention à ne jamais oublier de mettre en place ce qui va causer la terminaison
+  de la boucle (ie: faire en sorte qu'un jour la condition de terminaison
+  s'évalue à false) */
 .entry-1 {
-  background-color: darkorange;
+  background-color: #15bce4;
 }
-
 .entry-2 {
-  background-color: cyan;
+  background-color: #b957d3;
 }
-
 .entry-3 {
-  background-color: deeppink;
-}
-
-.entry-4 {
-  background-color: #4714ff;
+  background-color: #2a43e2;
 }
 
 /*# sourceMappingURL=styles.css.map */
