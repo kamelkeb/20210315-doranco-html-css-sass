@@ -4,3 +4,10 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin layout-size-spacing($width, $height, $margin, $padding) {
+  width: $width;
+  height: $height;
+  margin: $margin;
+  padding: $padding;
+}

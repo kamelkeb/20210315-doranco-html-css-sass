@@ -6,10 +6,11 @@
   background-color: purple;
 }
 
-/* */
 .central-section {
-  margin: 30px;
   width: 80%;
+  height: auto;
+  margin: 30px;
+  padding: auto;
   background-color: grey;
   display: flex;
   flex-wrap: wrap;
@@ -20,6 +21,7 @@
   width: 200px;
   height: 200px;
   margin: 12px;
+  padding: auto;
   font-size: 5rem;
 }
 

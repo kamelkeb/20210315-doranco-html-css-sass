@@ -1,17 +1,21 @@
 @import "../variables/variables";
-/* */
+@import "../mixins/mixins";
+
 .central-section {
-  margin: $central-section-margin;
-  width: $central-section-width;
+  @include layout-size-spacing(
+    $central-section-width,
+    auto,
+    $central-section-margin,
+    auto
+  );
   background-color: $central-section-bg-color;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+
   .element {
     background-color: $element-bg-color;
-    width: $card-size;
-    height: $card-size;
-    margin: $element-margin;
+    @include layout-size-spacing($card-size, $card-size, $element-margin, auto);
     font-size: $element-font-size;
   }
 }
