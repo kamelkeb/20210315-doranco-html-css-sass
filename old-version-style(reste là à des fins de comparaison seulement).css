@@ -1,103 +1,100 @@
 /* Pour écraser les margin et padding qui sont mis par défaut
 par les navigateurs. Le souci est que ce ne sont pas les mêmes
 mises par défaut par différentes versions */
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
 /* Partie header */
 .header {
-    width: 100%;
-    height: 10vh;
-    background-color:crimson;
+  width: 100%;
+  height: 10vh;
+  background-color: crimson;
 }
-
 
 /****************** Partie centrale ****************/
 
 /* Le conteneur aussi du menu latéral que du contenu à proprement de notre page */
-.main-container{
-    width: 100%;
-    display: flex;
+.main-container {
+  width: 100%;
+  display: flex;
 }
 
 /* Menu latéral lorsque large écran, mis en fouter horizontal lorsque 
 l'écran est petit */
-.aside{
-    width: 200px;
-    background-color: rgb(156, 156, 156);
+.aside {
+  width: 200px;
+  background-color: rgb(156, 156, 156);
 }
 
-.menu-entry {    
-    width: 100%;
-    height: 200px;  
+.menu-entry {
+  width: 100%;
+  height: 200px;
 }
 
-.menu-entry:hover{
-    box-shadow: 0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%), 0 11px 15px -7px rgb(0 0 0 / 20%);
+.menu-entry:hover {
+  box-shadow: 0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%),
+    0 11px 15px -7px rgb(0 0 0 / 20%);
 }
 
-.entry-1{
-    background-color:darkorange;
+.entry-1 {
+  background-color: darkorange;
 }
 
-.entry-2{
-    background-color:cyan;
+.entry-2 {
+  background-color: cyan;
 }
 
 .entry-3 {
-    background-color:deeppink;
+  background-color: deeppink;
 }
 
-.entry-4{
-    background-color:rgb(71, 20, 255);
+.entry-4 {
+  background-color: rgb(71, 20, 255);
 }
-
 
 /* Panneau central, conteneur des "sections" de contenu principal */
-.central-panel{
-    width: 100%;
-    display :flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.central-panel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.container-1{
-    margin: 30px;
-    width: 80%;
-    display :flex;
-    flex-wrap: wrap;
-    background-color: gray;
-    justify-content: space-around;
-
+.container-1 {
+  margin: 30px;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: gray;
+  justify-content: space-around;
 }
 
-.element{
-    background-color: gold;
-    width: 200px;
-    height: 200px;
-    margin: 10px;
-    font-size: 5rem;
+.element {
+  background-color: gold;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  font-size: 5rem;
 }
-
 
 /* Attention, si l'on met la média query avant les autres styles,
 alors les autres styles viendront écraser ce que spécifie la média 
 query même dans le cas d'une taille d'écran petite!!!     */
-@media screen and (max-width: 768px){
-    .main-container{
-        flex-direction: column-reverse;
-    }
-    .aside{
-        display: flex;
-        flex-direction: row;
-        justify-content: stretch;
-        width: 100%;
-        height: 10vh;
-    }
-    .menu-entry{
-        height: 10vh;
-    } 
+@media screen and (max-width: 768px) {
+  .main-container {
+    flex-direction: column-reverse;
+  }
+  .aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    width: 100%;
+    height: 10vh;
+  }
+  .menu-entry {
+    height: 10vh;
+  }
 }
